@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trivialitätenkabinett</title>
+        <link rel="stylesheet" type="text/css" href="web.css" />
+        <link rel="icon" href="images/favicon.png" type="image/png" /> 
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    
+    <body>
+        <header>
+        <h1>manuel <span>(Zellhöfer)</span></h1>
+        </header>
+        
+        <nav>
+            <a href="index.html">[ɪç ˈɔnlaɪ̯n]</a>
+            <a href="">[pʀoˈjɛktə]</a>
+            <a href="">[ˈʃtuːdɪ̯ən]</a>
+            <a href="">[ʒuʁ.nal]</a>
+        </nav>
+        
+        <div id="content">
+        
+<h2>Ich</h2>
+<p id="ich">
+<img id="ich" src="images/barco.jpg" alt="ich" />
+</p>
+
+<p>
+Ich habe Profile im ganzen Internet verteilt, die mich definieren. 
+Besser könnte ich es bestimmt nicht mal mit Wörtern! 
+Dieser Ort ist der einzige Ort im ganzen Internet an dem alle Schnüre 
+zusammenlaufen. Warum Zeit vergeuden?
+Bei einigen Profilanbietern muss man wahrscheinlich selbst ein Profil 
+veröffentlichen um meins zu sehen.
+</p>
+<a href="https://facebook.com/upalarupa">facebook</a>
+<a href="https://bitbucket.org/suntouch0r/">bitbucket</a>
+<a href="http://www.flickr.com/photos/suntoucher/">flickr</a>
+<a href="https://soundcloud.com/suntouch0r">soundcloud</a>
+<a href="https://github.com/tillmann">github</a>
+<a href="http://www.linkedin.com/pub/manuel-zellh%C3%B6fer/64/241/286">linkedin</a>.
+<a href="http://www.lastfm.de/user/suntouch0r">last.fm</a>
+<a href="http://www.couchsurfing.org/profile.html?id=E8TFSDP">couchsurfing</a>. 
+
+
+<script type="text/javascript">
+    $("img#ich").mousemove(
+        function (event) {
+            $(this).css( 'clip', 'rect(' + (event.pageY - this.offsetTop - 25) + 
+                'px 350px ' + (event.pageY - this.offsetTop + 25) + 'px 0px)' );
+        });
+</script>
+
+<canvas id="lines"></canvas>
+
+<script type="text/javascript">
+    var cv = $("#lines");
+    cv.mouseleave(
+        function () {
+            drawLines(-150,-150);
+        }
+    );
+    
+    cv.mousemove(
+        function (event) {
+            drawLines(event.offsetX, event.offsetY);
+        }
+    );    
+    /* genug jQuery... */
+    
+    var cv = cv[0];
+    
+    cv.width=350;
+    cv.height=100;
+    
+    /* nicht gefunden */
+    Math.sign = function (x) { return x>0 ? 1 : -1 };
+    
+    /* direkte Pixelmanipulation von canvas/context img */
+    function setPixel(img, x, y, r, g, b, a) {
+        if ( x>img.width || y>img.height )
+            return
+        
+        index = (x + y * img.width) * 4;
+        img.data[index+0] = r;
+        img.data[index+1] = g;
+        img.data[index+2] = b;
+        img.data[index+3] = a;
+    }
+    
+    /* witzige Linienspielerei */
+    function drawLines(mx,my) {
+        /* globale variablen: cv - canvas Element*/
+        var ct = cv.getContext("2d");
+        
+        var im = ct.createImageData(cv.width, cv.height);
+        
+        /* abstand der witzigen Linien*/
+        var h = 20;
+        /* ,breite‘ der Stufe */
+        var s = 150;
+        
+        var x,y;
+        for (y=h; y<cv.height; y=y+h)
+        {
+            var dy = 0;
+            for (x=0; x<cv.width; x++)
+            {
+
+                d = Math.exp(-0.5*(Math.pow(x-mx,2) + Math.pow(y-my,2))/s);
+                dy = Math.max(dy, Math.round(0.75*h*d));
+                
+                setPixel( im, x, y-dy, Math.round(192*d), 0, 0, 255);
+                setPixel( im, x, y-dy+1, 0, 0, 0, 32);                
+            }
+        }
+        
+        ct.putImageData( im, 0, 0);
+    }
+    
+    drawLines(-150,-150);
+</script>
+
+<p>
+Ich lebe, studiere und arbeite in Berlin. Im schönen Wedding, an der 
+Freien Universität und am Max-Planck-Institut für Bildungsforschung. 
+Ich spiele gern.
+</p>
+
+
+<!-- here ends content -->
+        </div>
+    </body>
+ 
+</html>
+
+
