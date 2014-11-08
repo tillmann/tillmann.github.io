@@ -14,34 +14,25 @@
         <h1><span>Tillmann</span></h1>
         </header>
 
-        <nav>
-            <a href="index.html">[ɪç ˈɔnlaɪ̯n]</a>
-            <a href="projekte.html">[pʀoˈjɛktə]</a>
-            <a href="studien.html">[ˈʃtuːdɪ̯ən]</a>
-            <a href="">[ʒuʁ.nal]</a>
-        </nav>
-
         <div id="content">
+<h2>Online</h2>
 
 <p id="ich">
 <img id="ich" src="images/barco.jpg" alt="ich" />
 </p>
 
 <p>
-Ich habe Profile im ganzen Internet verteilt, die mich definieren.
-Besser könnte ich es bestimmt nicht mal mit Worten!
-Dieser Ort ist der einzige Ort im ganzen Internet an dem alle Schnüre
-zusammenlaufen. Warum Zeit vergeuden?
-Bei einigen Profilanbietern muss man wahrscheinlich selbst ein Profil
-veröffentlichen um meins zu sehen.
+Keine Zeit vergeuden. Hier meine digitalen Personae. 
+Bei einigen Anbietern muss man wahrscheinlich selbst 
+existieren um mein Profil zu sehen.
 </p>
-<a href="https://facebook.com/upalarupa">facebook</a>
-<a href="https://bitbucket.org/suntouch0r/">bitbucket</a>
-<a href="http://www.flickr.com/photos/suntoucher/">flickr</a>
-<a href="https://soundcloud.com/suntouch0r">soundcloud</a>
-<a href="https://github.com/tillmann">github</a>
-<a href="http://www.linkedin.com/pub/manuel-zellh%C3%B6fer/64/241/286">linkedin</a>.
-<a href="http://www.lastfm.de/user/suntouch0r">last.fm</a>
+<a href="https://facebook.com/upalarupa">facebook</a>,
+<a href="https://bitbucket.org/suntouch0r/">bitbucket</a>,
+<a href="http://www.flickr.com/photos/suntoucher/">flickr</a>,
+<a href="https://soundcloud.com/suntouch0r">soundcloud</a>,
+<a href="https://github.com/tillmann">github</a>,
+<a href="http://www.linkedin.com/pub/manuel-zellh%C3%B6fer/64/241/286">linkedin</a>,
+<a href="http://www.lastfm.de/user/suntouch0r">last.fm</a>,
 <a href="http://www.couchsurfing.org/profile.html?id=E8TFSDP">couchsurfing</a>.
 
 
@@ -53,87 +44,44 @@ veröffentlichen um meins zu sehen.
         });
 </script>
 
-<canvas id="lines"></canvas>
 
-<script type="text/javascript">
-    var cv = $("#lines");
-    cv.mouseleave(
-        function () {
-            drawLines(-150,-150);
-        }
-    );
+</div>
+<div class='studien'>
 
-    cv.mousemove(
-        function (event) {
-            drawLines(event.offsetX, event.offsetY);
-        }
-    );
-    /* genug jQuery... */
+<h2>Studien</h2>
+Ein Abriss meines Studiums inklusive aller 
+von mir produzierten, halbwegs vorzeigbaren Inhalte. 
+<div style="display:block"></div>
+<a class="logo" href="http://www.fu-berlin.de"><img src="images/uni_fu.png" alt="Logo FU" /></a>
+<h3>Freie Universität Berlin <span>(2011-heute)</span> </h3>
+<h4>Informatik</h4>
+<p>Vertiefungsrichtung: <br/><em>Künstliche Intelligenz</em></p>
+<p>Seminar: <br/><em>Compressed Sensing für MRT</em> 
+(<a href="files/zellhoefer-bvm-2014.pdf">pdf</a>, <a href="files/zellhoefer-bvm-slides-2014.pdf">folien</a>)</p>
+<p>Seminar: <br/><em>Robot Learning from Demonstration by Constructing Skill Trees</em> 
+(<a href="files/zellhoefer-sci-2012.pdf">pdf</a>, <a href="files/zellhoefer-sci-slides-2012.pdf">folien</a>)</p>
 
-    var cv = cv[0];
+<p>Projekt: <br/><em>FUmanoids – Schrittplanung</em> 
+(<a href="files/zellhoefer-swp-2012.pdf">pdf</a>, <a href="files/zellhoefer-swp-slides-2012.pdf">folien</a>)</p>
 
-    cv.width=350;
-    cv.height=100;
 
-    /* nicht gefunden */
-    Math.sign = function (x) { return x>0 ? 1 : -1 };
-
-    /* direkte Pixelmanipulation von canvas/context img */
-    function setPixel(img, x, y, r, g, b, a) {
-        if ( x>img.width || y>img.height )
-            return
-
-        var index = (x + y * img.width) * 4;
-        img.data[index+0] = r;
-        img.data[index+1] = g;
-        img.data[index+2] = b;
-        img.data[index+3] = a;
-    }
-
-    /* witzige Linienspielerei */
-    function drawLines(mx,my) {
-        /* globale variablen: cv - canvas Element*/
-        var ct = cv.getContext("2d");
-
-        var im = ct.createImageData(cv.width, cv.height);
-
-        /* abstand der witzigen Linien*/
-        var h = 20;
-        /* ,breite‘ der Stufe */
-        var s = 150;
-
-        var x,y;
-
-        var d,dy;
-        for (y=h; y<cv.height; y=y+h)
-        {
-            dy = 0;
-            for (x=0; x<cv.width; x++)
-            {
-
-                d = Math.exp(-0.5*(Math.pow(x-mx,2) + Math.pow(y-my,2))/s);
-                dy = Math.max(dy, Math.round(0.75*h*d));
-
-                setPixel( im, x, y-dy, Math.round(192*d), 0, 0, 255);
-                setPixel( im, x, y-dy+1, 0, 0, 0, 32);
-            }
-        }
-
-        ct.putImageData( im, 0, 0);
-    }
-
-    drawLines(-150,-150);
-</script>
-
-<p>
-Ich lebe, studiere und arbeite in Berlin. Im schönen Wedding, an der
-Freien Universität und am Max-Planck-Institut für Bildungsforschung.
-Ich spiele gern.
+<div style="display:block"></div>
+<a class="logo" href="http://ist.utl.pt"><img src="images/uni_ist.png" alt="Logo IST" /></a>
+<h3>Instituto Superior Técnico Lisboa <span>(2008-2009)</span></h3>
+<h4>Engenharia Informática e de Computadores</h4>
+Studienaufenthalt mit Schwerpunkten
+<ul><li>Künstliche Intelligenz/Robotik</li><li>Modellierung/Simulation</li><li>Spanisch Sprachkurs</li></ul>
 </p>
 
+<div style="display:block"></div>
+<a class="logo" href="http://www.tu-ilmenau.de"><img src="images/uni_tui.png" alt="Logo TUI" /></a>
+<h3>Technische Universität Ilmenau <span>(2006-2011)</span></h3> 
+<h4>Ingenieurinformatik (B.Sc.)</h4>
+<p>Vertiefungsrichtung: <br/><em>Kognitive Technische Systeme</em></p>
+<p>Abschlussarbeit: <br/><em>Klassifikation von Fahrzeugen nach Typ und Modell anhand von Videodaten</em> (<a href="files/zellhoefer-ba-2011.pdf">pdf</a>)</p>
+<p>Hauptseminar: <br/><em>Klassifikation und Prädiktion von Trajektorien mit neuro-evolvierten RNNs</em> (<a href="files/zellhoefer-hs-2010.pdf">pdf</a>)</p>
+</div>
 
-<!-- here ends content -->
-        </div>
     </body>
 
 </html>

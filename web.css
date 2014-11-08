@@ -9,22 +9,27 @@
 	src: 				url('fonts/EBGaramond08-Regular.ttf');
 }
 
+@font-face {
+	font-family: 		Linux-Libertine-Display;
+	src: 				url('fonts/LinLibertine_DRah.ttf');
+}
+
 /*
  *	Allgemeiner Seitenaufbau
  *
  */
 body {
-	font: 				10pt 'EBGaramond8', serif;
+	font: 				12pt Linux-Libertine-Display, serif;
 	color:				#333027;
 	overflow:			scroll;
-	width:				480px;
+	width:				350px;
 	margin:				auto;
 }
 
 header h1 {
 	font-weight:		normal;
 	font-size:			760%;
-	font-family: 		'EBGaramond12', serif;
+	font-family: 		Linux-Libertine-Display, serif;
 	color:				#555047;
 	height:				410%;
 	padding:0px;
@@ -166,4 +171,25 @@ img#ich {
 	clip:				rect(105px 350px 155px 0px);
 }	
 
-
+    .studien p {
+        padding: 0px;
+        margin:  0px;
+        margin-left:20px;
+    }
+    
+    .studien p:first-letter {
+        font-size: 100%;
+        font-weight: normal;
+        margin-left:-20px;
+    }
+    
+    .studien p em {
+        margin-left:auto;
+    }
+    
+    .studien h3 {
+        background-color:#EEE;
+    }
+    div.studien {
+        width: 350px;
+    }
