@@ -1,18 +1,4 @@
 
-@font-face {
-	font-family: 		EBGaramond12;
-	src: 				url('fonts/EBGaramond12-Regular.ttf');
-}
-
-@font-face {
-	font-family:		EBGaramond8;
-	src: 				url('fonts/EBGaramond08-Regular.ttf');
-}
-
-@font-face {
-	font-family: 		Linux-Libertine-Display;
-	src: 				url('fonts/LinLibertine_DRah.ttf');
-}
 
 /*
  *	Allgemeiner Seitenaufbau
@@ -29,7 +15,7 @@ body {
 header h1 {
 	font-weight:		normal;
 	font-size:			760%;
-	font-family: 		Linux-Libertine-Display, serif;
+	font-family: 		Roboto, serif;
 	color:				#555047;
 	height:				410%;
 	padding:0px;
