@@ -6,83 +6,89 @@
         <title>Tillmann</title>
         <link rel="stylesheet" type="text/css" href="web.css" />
         <link rel="icon" href="images/favicon.png" type="image/png" />
-        <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic"  type="text/css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css">
+        
         <script src="http://code.jquery.com/jquery-latest.js"></script>
+        
     </head>
 
     <body>
         <header>
-        <h1><span>Tillmann</span></h1>
+            <h1><span>Tillmann</span></h1>
+            <p>
+                <a href="https://bitbucket.org/suntouch0r/"><i class="fa fa-bitbucket"></i></a>
+                <a href="http://www.flickr.com/photos/suntoucher/"><i class="fa fa-flickr"></i></a>
+                <a href="https://soundcloud.com/t1llmann"><i class="fa fa-soundcloud"></i></a>
+                <a href="https://github.com/tillmann"><i class="fa fa-github"></i></a>
+                <a href="http://www.linkedin.com/pub/manuel-zellh%C3%B6fer/64/241/286"><i class="fa fa-linkedin"></i></a>
+                <a href="http://www.lastfm.de/user/suntouch0r"><i class="fa fa-lastfm"></i></a>
+                <!--<a href="https://www.couchsurfing.com/users/2122324/profile">couchsurfing</a>-->
+            </p>
         </header>
 
         <div id="content">
-<h2>Online</h2>
+        <h2>…Oh dear! Oh dear! I shall be late!</h2>
+        <!--<h2>Im Netz</h2>-->
 
-<p id="ich">
-<img id="ich" src="images/barco.jpg" alt="ich" />
-</p>
+        <!--<p id="ich">
+            <img id="ich" src="images/barco.jpg" alt="ich" />
+        </p>-->
 
-<p>
-Keine Zeit vergeuden. Hier meine digitalen Personae. 
-Bei einigen Anbietern muss man wahrscheinlich selbst 
-existieren um mein Profil zu sehen.
-</p>
-<a href="https://facebook.com/upalarupa">facebook</a>,
-<a href="https://bitbucket.org/suntouch0r/">bitbucket</a>,
-<a href="http://www.flickr.com/photos/suntoucher/">flickr</a>,
-<a href="https://soundcloud.com/suntouch0r">soundcloud</a>,
-<a href="https://github.com/tillmann">github</a>,
-<a href="http://www.linkedin.com/pub/manuel-zellh%C3%B6fer/64/241/286">linkedin</a>,
-<a href="http://www.lastfm.de/user/suntouch0r">last.fm</a>,
-<a href="https://www.couchsurfing.com/users/2122324/profile">couchsurfing</a>.
-
-
-<script type="text/javascript">
-    $("img#ich").mousemove(
-        function (event) {
-            $(this).css( 'clip', 'rect(' + (event.pageY - this.offsetTop - 25) +
-                'px 350px ' + (event.pageY - this.offsetTop + 25) + 'px 0px)' );
-        });
-</script>
+        <!--<p>
+        Keine Zeit vergeuden. Hier meine digitalen Personae. 
+        Bei einigen Anbietern muss man wahrscheinlich selbst 
+        existieren um mein Profil zu sehen.
+        </p>
+        
+        <script type="text/javascript">
+            $("img#ich").mousemove(
+                function (event) {
+                    $(this).css( 'clip', 'rect(' + (event.pageY - this.offsetTop - 25) +
+                        'px 350px ' + (event.pageY - this.offsetTop + 25) + 'px 0px)' );
+                });
+        </script>
 
 
-</div>
-<div class='studien'>
+        </div>--><!--
+        <div class='studien'>
 
-<h2>Studien</h2>
-Ein Abriss meines Studiums inklusive aller 
-von mir produzierten, vorzeigbaren Inhalte. 
-<div style="display:block"></div>
-<a class="logo" href="http://www.fu-berlin.de"><img src="images/uni_fu.png" alt="Logo FU" /></a>
-<h3>Freie Universität Berlin <span>(2011-heute)</span> </h3>
-<h4>Informatik</h4>
-<p>Vertiefungsrichtung: <br/><em>Künstliche Intelligenz</em></p>
-<p>Seminar: <br/><em>Compressed Sensing für MRT</em> 
-(<a href="files/zellhoefer-bvm-2014.pdf">pdf</a>, <a href="files/zellhoefer-bvm-slides-2014.pdf">folien</a>)</p>
-<p>Seminar: <br/><em>Robot Learning from Demonstration by Constructing Skill Trees</em> 
-(<a href="files/zellhoefer-sci-2012.pdf">pdf</a>, <a href="files/zellhoefer-sci-slides-2012.pdf">folien</a>)</p>
+        <h2>Studien</h2>
+        Ein Abriss meines Studiums inklusive einiger
+        von mir produzierten Inhalte. 
+        <div style="display:block"></div>
+        <a class="logo" href="http://www.fu-berlin.de"><img src="images/uni_fu.png" alt="Logo FU" /></a>
+        <h3>Freie Universität Berlin <span>(2011-2015)</span> </h3>
+        <h4>Informatik</h4>
+        <p>Vertiefungsrichtung: <br/><em>Künstliche Intelligenz</em></p>
+        <p>Seminar: <br/><em>Compressed Sensing für MRT</em> 
+        (<a href="files/zellhoefer-bvm-2014.pdf">pdf</a>, <a href="files/zellhoefer-bvm-slides-2014.pdf">folien</a>)</p>
+        <p>Seminar: <br/><em>Robot Learning from Demonstration by Constructing Skill Trees</em> 
+        (<a href="files/zellhoefer-sci-2012.pdf">pdf</a>, <a href="files/zellhoefer-sci-slides-2012.pdf">folien</a>)</p>
 
-<p>Projekt: <br/><em>FUmanoids – Schrittplanung</em> 
-(<a href="files/zellhoefer-swp-2012.pdf">pdf</a>, <a href="files/zellhoefer-swp-slides-2012.pdf">folien</a>)</p>
+        <p>Projekt: <br/><em>FUmanoids – Schrittplanung</em> 
+        (<a href="files/zellhoefer-swp-2012.pdf">pdf</a>, <a href="files/zellhoefer-swp-slides-2012.pdf">folien</a>)</p>
 
 
-<div style="display:block"></div>
-<a class="logo" href="http://ist.utl.pt"><img src="images/uni_ist.png" alt="Logo IST" /></a>
-<h3>Instituto Superior Técnico Lisboa <span>(2008-2009)</span></h3>
-<h4>Engenharia Informática e de Computadores</h4>
-Studienaufenthalt mit Schwerpunkten
-<ul><li>Künstliche Intelligenz/Robotik</li><li>Modellierung/Simulation</li><li>Spanisch Sprachkurs</li></ul>
-</p>
+        <div style="display:block"></div>
+        <a class="logo" href="http://ist.utl.pt"><img src="images/uni_ist.png" alt="Logo IST" /></a>
+        <h3>Instituto Superior Técnico Lisboa <span>(2008-2009)</span></h3>
+        <h4>Engenharia Informática e de Computadores</h4>
+        Studienaufenthalt mit Schwerpunkten
+        <ul><li>Künstliche Intelligenz/Robotik</li><li>Modellierung/Simulation</li><li>Spanisch Sprachkurs</li></ul>
+        </p>
 
-<div style="display:block"></div>
-<a class="logo" href="http://www.tu-ilmenau.de"><img src="images/uni_tui.png" alt="Logo TUI" /></a>
-<h3>Technische Universität Ilmenau <span>(2006-2011)</span></h3> 
-<h4>Ingenieurinformatik (B.Sc.)</h4>
-<p>Vertiefungsrichtung: <br/><em>Kognitive Technische Systeme</em></p>
-<p>Abschlussarbeit: <br/><em>Klassifikation von Fahrzeugen nach Typ und Modell anhand von Videodaten</em> (<a href="files/zellhoefer-ba-2011.pdf">pdf</a>)</p>
-<p>Hauptseminar: <br/><em>Klassifikation und Prädiktion von Trajektorien mit neuro-evolvierten RNNs</em> (<a href="files/zellhoefer-hs-2010.pdf">pdf</a>)</p>
-</div>
-
+        <div style="display:block"></div>
+        <a class="logo" href="http://www.tu-ilmenau.de"><img src="images/uni_tui.png" alt="Logo TUI" /></a>
+        <h3>Technische Universität Ilmenau <span>(2006-2011)</span></h3> 
+        <h4>Ingenieurinformatik (B.Sc.)</h4>
+        <p>Vertiefungsrichtung: <br/><em>Kognitive Technische Systeme</em></p>
+        <p>Abschlussarbeit: <br/><em>Klassifikation von Fahrzeugen nach Typ und Modell anhand von Videodaten</em> (<a href="files/zellhoefer-ba-2011.pdf">pdf</a>)</p>
+        <p>Hauptseminar: <br/><em>Klassifikation und Prädiktion von Trajektorien mit neuro-evolvierten RNNs</em> (<a href="files/zellhoefer-hs-2010.pdf">pdf</a>)</p>
+        </div>
+        -->
+                <p style="text-align:center;color:#FCFCFC">♥</p>         
+        </div>
     </body>
 
 </html>
